@@ -1,0 +1,915 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A2A7C2E1F754C3E00BD65C2 /* ChineseIDCardOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA5457C1F74DC94003F61A2 /* ChineseIDCardOCR.framework */; };
+		0A2A7C2F1F754C3E00BD65C2 /* ChineseIDCardOCR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA5457C1F74DC94003F61A2 /* ChineseIDCardOCR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0A4CB8861F76174C00875276 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CB8851F76174C00875276 /* main.swift */; };
+		0A5C940C1F78EBCE00836BF6 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5C940B1F78EBCE00836BF6 /* ScanViewController.swift */; };
+		0A5C940F1F78EE7300836BF6 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5C940B1F78EBCE00836BF6 /* ScanViewController.swift */; };
+		0A993C9A1F7CAEB600A0C44A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993C961F7CACA800A0C44A /* Utils.swift */; };
+		0A993CBF1F7CCDCD00A0C44A /* ChineseIDCardOCR_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A993CBD1F7CCDCD00A0C44A /* ChineseIDCardOCR_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A993CD41F7D040800A0C44A /* KGUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CCE1F7D040800A0C44A /* KGUtils.swift */; };
+		0A993CD51F7D040800A0C44A /* KGPreProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CCF1F7D040800A0C44A /* KGPreProcessing.swift */; };
+		0A993CD61F7D040800A0C44A /* SmoothThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CD01F7D040800A0C44A /* SmoothThresholdFilter.swift */; };
+		0A993CD71F7D040800A0C44A /* KGError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CD11F7D040800A0C44A /* KGError.swift */; };
+		0A993CD81F7D040800A0C44A /* KGEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CD21F7D040800A0C44A /* KGEngine.swift */; };
+		0A993CD91F7D040800A0C44A /* AdaptiveThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CD31F7D040800A0C44A /* AdaptiveThresholdFilter.swift */; };
+		0A993CDB1F7D041700A0C44A /* KGNetCNN.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CDA1F7D041700A0C44A /* KGNetCNN.mlmodel */; };
+		0A993CDE1F7D044200A0C44A /* KGNetCNN.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CDA1F7D041700A0C44A /* KGNetCNN.mlmodel */; };
+		0A993CDF1F7D044200A0C44A /* SmoothThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CD01F7D040800A0C44A /* SmoothThresholdFilter.swift */; };
+		0A993CE01F7D044200A0C44A /* AdaptiveThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CD31F7D040800A0C44A /* AdaptiveThresholdFilter.swift */; };
+		0A993CE11F7D044200A0C44A /* KGUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CCE1F7D040800A0C44A /* KGUtils.swift */; };
+		0A993CE21F7D044200A0C44A /* KGPreProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CCF1F7D040800A0C44A /* KGPreProcessing.swift */; };
+		0A993CE31F7D044200A0C44A /* KGError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CD11F7D040800A0C44A /* KGError.swift */; };
+		0A993CE41F7D044200A0C44A /* KGEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CD21F7D040800A0C44A /* KGEngine.swift */; };
+		0A993CE51F7D045F00A0C44A /* KGPreProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CCF1F7D040800A0C44A /* KGPreProcessing.swift */; };
+		0A993CE61F7D046B00A0C44A /* KGUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CCE1F7D040800A0C44A /* KGUtils.swift */; };
+		0A993CE71F7D047900A0C44A /* SmoothThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CD01F7D040800A0C44A /* SmoothThresholdFilter.swift */; };
+		0A993CE81F7D047900A0C44A /* AdaptiveThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A993CD31F7D040800A0C44A /* AdaptiveThresholdFilter.swift */; };
+		0AA545861F74DC94003F61A2 /* ChineseIDCardOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA5457C1F74DC94003F61A2 /* ChineseIDCardOCR.framework */; };
+		0AA5458B1F74DC94003F61A2 /* ChineseIDCardOCRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5458A1F74DC94003F61A2 /* ChineseIDCardOCRTests.swift */; };
+		0AA5458D1F74DC94003F61A2 /* ChineseIDCardOCR.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA5457F1F74DC94003F61A2 /* ChineseIDCardOCR.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AA545A51F74E853003F61A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA545A41F74E853003F61A2 /* AppDelegate.swift */; };
+		0AA545A71F74E853003F61A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA545A61F74E853003F61A2 /* ViewController.swift */; };
+		0AA545AA1F74E853003F61A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA545A81F74E853003F61A2 /* Main.storyboard */; };
+		0AA545AC1F74E853003F61A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AA545AB1F74E853003F61A2 /* Assets.xcassets */; };
+		0AA545AF1F74E853003F61A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA545AD1F74E853003F61A2 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AA545871F74DC94003F61A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AA545731F74DC94003F61A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AA5457B1F74DC94003F61A2;
+			remoteInfo = ChineseIDCardOCR;
+		};
+		0AA545B41F74E85F003F61A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AA545731F74DC94003F61A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AA5457B1F74DC94003F61A2;
+			remoteInfo = ChineseIDCardOCR;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0A2A7C301F754C3E00BD65C2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0A2A7C2F1F754C3E00BD65C2 /* ChineseIDCardOCR.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A4CB8811F76174C00875276 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0A4CB8831F76174C00875276 /* TrainingDataGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TrainingDataGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A4CB8851F76174C00875276 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0A5C940B1F78EBCE00836BF6 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		0A993C961F7CACA800A0C44A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0A993CBB1F7CCDCD00A0C44A /* ChineseIDCardOCR_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChineseIDCardOCR_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A993CBD1F7CCDCD00A0C44A /* ChineseIDCardOCR_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChineseIDCardOCR_macOS.h; sourceTree = "<group>"; };
+		0A993CBE1F7CCDCD00A0C44A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A993CCE1F7D040800A0C44A /* KGUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGUtils.swift; sourceTree = "<group>"; };
+		0A993CCF1F7D040800A0C44A /* KGPreProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGPreProcessing.swift; sourceTree = "<group>"; };
+		0A993CD01F7D040800A0C44A /* SmoothThresholdFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmoothThresholdFilter.swift; sourceTree = "<group>"; };
+		0A993CD11F7D040800A0C44A /* KGError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGError.swift; sourceTree = "<group>"; };
+		0A993CD21F7D040800A0C44A /* KGEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGEngine.swift; sourceTree = "<group>"; };
+		0A993CD31F7D040800A0C44A /* AdaptiveThresholdFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveThresholdFilter.swift; sourceTree = "<group>"; };
+		0A993CDA1F7D041700A0C44A /* KGNetCNN.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = KGNetCNN.mlmodel; path = Sources/KGNetCNN.mlmodel; sourceTree = SOURCE_ROOT; };
+		0AA5457C1F74DC94003F61A2 /* ChineseIDCardOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChineseIDCardOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AA5457F1F74DC94003F61A2 /* ChineseIDCardOCR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChineseIDCardOCR.h; sourceTree = "<group>"; };
+		0AA545801F74DC94003F61A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AA545851F74DC94003F61A2 /* ChineseIDCardOCRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChineseIDCardOCRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AA5458A1F74DC94003F61A2 /* ChineseIDCardOCRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseIDCardOCRTests.swift; sourceTree = "<group>"; };
+		0AA5458C1F74DC94003F61A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AA545A21F74E853003F61A2 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AA545A41F74E853003F61A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0AA545A61F74E853003F61A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0AA545A91F74E853003F61A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0AA545AB1F74E853003F61A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AA545AE1F74E853003F61A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0AA545B01F74E853003F61A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A4CB8801F76174C00875276 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A993CB71F7CCDCD00A0C44A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA545781F74DC94003F61A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA545821F74DC94003F61A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA545861F74DC94003F61A2 /* ChineseIDCardOCR.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA5459F1F74E853003F61A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A2A7C2E1F754C3E00BD65C2 /* ChineseIDCardOCR.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A4CB8841F76174C00875276 /* TrainingDataGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				0A4CB8851F76174C00875276 /* main.swift */,
+			);
+			path = TrainingDataGenerator;
+			sourceTree = "<group>";
+		};
+		0A993CAF1F7CBF7400A0C44A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A993CBC1F7CCDCD00A0C44A /* ChineseIDCardOCR-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				0A993CBD1F7CCDCD00A0C44A /* ChineseIDCardOCR_macOS.h */,
+				0A993CBE1F7CCDCD00A0C44A /* Info.plist */,
+			);
+			path = "ChineseIDCardOCR-macOS";
+			sourceTree = "<group>";
+		};
+		0A993CCD1F7D040800A0C44A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0A993CDD1F7D043100A0C44A /* Model */,
+				0A993CDC1F7D041C00A0C44A /* Filters */,
+				0A993CCE1F7D040800A0C44A /* KGUtils.swift */,
+				0A993CCF1F7D040800A0C44A /* KGPreProcessing.swift */,
+				0A993CD11F7D040800A0C44A /* KGError.swift */,
+				0A993CD21F7D040800A0C44A /* KGEngine.swift */,
+			);
+			path = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		0A993CDC1F7D041C00A0C44A /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				0A993CD01F7D040800A0C44A /* SmoothThresholdFilter.swift */,
+				0A993CD31F7D040800A0C44A /* AdaptiveThresholdFilter.swift */,
+			);
+			name = Filters;
+			sourceTree = "<group>";
+		};
+		0A993CDD1F7D043100A0C44A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A993CDA1F7D041700A0C44A /* KGNetCNN.mlmodel */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0AA545721F74DC94003F61A2 = {
+			isa = PBXGroup;
+			children = (
+				0AA5457E1F74DC94003F61A2 /* ChineseIDCardOCR */,
+				0AA545891F74DC94003F61A2 /* ChineseIDCardOCRTests */,
+				0A4CB8841F76174C00875276 /* TrainingDataGenerator */,
+				0A993CBC1F7CCDCD00A0C44A /* ChineseIDCardOCR-macOS */,
+				0AA5457D1F74DC94003F61A2 /* Products */,
+				0A993CAF1F7CBF7400A0C44A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0AA5457D1F74DC94003F61A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AA5457C1F74DC94003F61A2 /* ChineseIDCardOCR.framework */,
+				0AA545851F74DC94003F61A2 /* ChineseIDCardOCRTests.xctest */,
+				0AA545A21F74E853003F61A2 /* Example.app */,
+				0A4CB8831F76174C00875276 /* TrainingDataGenerator */,
+				0A993CBB1F7CCDCD00A0C44A /* ChineseIDCardOCR_macOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AA5457E1F74DC94003F61A2 /* ChineseIDCardOCR */ = {
+			isa = PBXGroup;
+			children = (
+				0A993CCD1F7D040800A0C44A /* Sources */,
+				0AA545A31F74E853003F61A2 /* Example */,
+				0AA5457F1F74DC94003F61A2 /* ChineseIDCardOCR.h */,
+				0AA545801F74DC94003F61A2 /* Info.plist */,
+			);
+			path = ChineseIDCardOCR;
+			sourceTree = "<group>";
+		};
+		0AA545891F74DC94003F61A2 /* ChineseIDCardOCRTests */ = {
+			isa = PBXGroup;
+			children = (
+				0AA5458A1F74DC94003F61A2 /* ChineseIDCardOCRTests.swift */,
+				0AA5458C1F74DC94003F61A2 /* Info.plist */,
+			);
+			path = ChineseIDCardOCRTests;
+			sourceTree = "<group>";
+		};
+		0AA545A31F74E853003F61A2 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				0AA545A41F74E853003F61A2 /* AppDelegate.swift */,
+				0AA545A61F74E853003F61A2 /* ViewController.swift */,
+				0A5C940B1F78EBCE00836BF6 /* ScanViewController.swift */,
+				0AA545A81F74E853003F61A2 /* Main.storyboard */,
+				0AA545AB1F74E853003F61A2 /* Assets.xcassets */,
+				0AA545AD1F74E853003F61A2 /* LaunchScreen.storyboard */,
+				0AA545B01F74E853003F61A2 /* Info.plist */,
+				0A993C961F7CACA800A0C44A /* Utils.swift */,
+			);
+			name = Example;
+			path = ../Example;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0A993CB81F7CCDCD00A0C44A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A993CBF1F7CCDCD00A0C44A /* ChineseIDCardOCR_macOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA545791F74DC94003F61A2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA5458D1F74DC94003F61A2 /* ChineseIDCardOCR.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0A4CB8821F76174C00875276 /* TrainingDataGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A4CB8871F76174C00875276 /* Build configuration list for PBXNativeTarget "TrainingDataGenerator" */;
+			buildPhases = (
+				0A4CB87F1F76174C00875276 /* Sources */,
+				0A4CB8801F76174C00875276 /* Frameworks */,
+				0A4CB8811F76174C00875276 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrainingDataGenerator;
+			productName = TrainingDataGenerator;
+			productReference = 0A4CB8831F76174C00875276 /* TrainingDataGenerator */;
+			productType = "com.apple.product-type.tool";
+		};
+		0A993CBA1F7CCDCD00A0C44A /* ChineseIDCardOCR-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A993CC01F7CCDCD00A0C44A /* Build configuration list for PBXNativeTarget "ChineseIDCardOCR-macOS" */;
+			buildPhases = (
+				0A993CB61F7CCDCD00A0C44A /* Sources */,
+				0A993CB71F7CCDCD00A0C44A /* Frameworks */,
+				0A993CB81F7CCDCD00A0C44A /* Headers */,
+				0A993CB91F7CCDCD00A0C44A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ChineseIDCardOCR-macOS";
+			productName = "ChineseIDCardOCR-macOS";
+			productReference = 0A993CBB1F7CCDCD00A0C44A /* ChineseIDCardOCR_macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0AA5457B1F74DC94003F61A2 /* ChineseIDCardOCR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AA545901F74DC94003F61A2 /* Build configuration list for PBXNativeTarget "ChineseIDCardOCR" */;
+			buildPhases = (
+				0AA545771F74DC94003F61A2 /* Sources */,
+				0AA545781F74DC94003F61A2 /* Frameworks */,
+				0AA545791F74DC94003F61A2 /* Headers */,
+				0AA5457A1F74DC94003F61A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChineseIDCardOCR;
+			productName = ChineseIDCardOCR;
+			productReference = 0AA5457C1F74DC94003F61A2 /* ChineseIDCardOCR.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0AA545841F74DC94003F61A2 /* ChineseIDCardOCRTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AA545931F74DC94003F61A2 /* Build configuration list for PBXNativeTarget "ChineseIDCardOCRTests" */;
+			buildPhases = (
+				0AA545811F74DC94003F61A2 /* Sources */,
+				0AA545821F74DC94003F61A2 /* Frameworks */,
+				0AA545831F74DC94003F61A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AA545881F74DC94003F61A2 /* PBXTargetDependency */,
+			);
+			name = ChineseIDCardOCRTests;
+			productName = ChineseIDCardOCRTests;
+			productReference = 0AA545851F74DC94003F61A2 /* ChineseIDCardOCRTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0AA545A11F74E853003F61A2 /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AA545B11F74E853003F61A2 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				0AA5459E1F74E853003F61A2 /* Sources */,
+				0AA5459F1F74E853003F61A2 /* Frameworks */,
+				0AA545A01F74E853003F61A2 /* Resources */,
+				0A2A7C301F754C3E00BD65C2 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AA545B51F74E85F003F61A2 /* PBXTargetDependency */,
+			);
+			name = Example;
+			productName = Example;
+			productReference = 0AA545A21F74E853003F61A2 /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AA545731F74DC94003F61A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Kevin.Gong;
+				TargetAttributes = {
+					0A4CB8821F76174C00875276 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					0A993CBA1F7CCDCD00A0C44A = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					0AA5457B1F74DC94003F61A2 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+					0AA545841F74DC94003F61A2 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					0AA545A11F74E853003F61A2 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 0AA545761F74DC94003F61A2 /* Build configuration list for PBXProject "ChineseIDCardOCR" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0AA545721F74DC94003F61A2;
+			productRefGroup = 0AA5457D1F74DC94003F61A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AA5457B1F74DC94003F61A2 /* ChineseIDCardOCR */,
+				0AA545841F74DC94003F61A2 /* ChineseIDCardOCRTests */,
+				0AA545A11F74E853003F61A2 /* Example */,
+				0A4CB8821F76174C00875276 /* TrainingDataGenerator */,
+				0A993CBA1F7CCDCD00A0C44A /* ChineseIDCardOCR-macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A993CB91F7CCDCD00A0C44A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA5457A1F74DC94003F61A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA545831F74DC94003F61A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA545A01F74E853003F61A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA545AF1F74E853003F61A2 /* LaunchScreen.storyboard in Resources */,
+				0AA545AC1F74E853003F61A2 /* Assets.xcassets in Resources */,
+				0AA545AA1F74E853003F61A2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A4CB87F1F76174C00875276 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A993CE51F7D045F00A0C44A /* KGPreProcessing.swift in Sources */,
+				0A993CE81F7D047900A0C44A /* AdaptiveThresholdFilter.swift in Sources */,
+				0A4CB8861F76174C00875276 /* main.swift in Sources */,
+				0A993CE61F7D046B00A0C44A /* KGUtils.swift in Sources */,
+				0A993CE71F7D047900A0C44A /* SmoothThresholdFilter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A993CB61F7CCDCD00A0C44A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A993CDE1F7D044200A0C44A /* KGNetCNN.mlmodel in Sources */,
+				0A993CE01F7D044200A0C44A /* AdaptiveThresholdFilter.swift in Sources */,
+				0A993CDF1F7D044200A0C44A /* SmoothThresholdFilter.swift in Sources */,
+				0A993CE21F7D044200A0C44A /* KGPreProcessing.swift in Sources */,
+				0A993CE31F7D044200A0C44A /* KGError.swift in Sources */,
+				0A993CE41F7D044200A0C44A /* KGEngine.swift in Sources */,
+				0A993CE11F7D044200A0C44A /* KGUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA545771F74DC94003F61A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A993CDB1F7D041700A0C44A /* KGNetCNN.mlmodel in Sources */,
+				0A993CD51F7D040800A0C44A /* KGPreProcessing.swift in Sources */,
+				0A993CD81F7D040800A0C44A /* KGEngine.swift in Sources */,
+				0A5C940C1F78EBCE00836BF6 /* ScanViewController.swift in Sources */,
+				0A993CD71F7D040800A0C44A /* KGError.swift in Sources */,
+				0A993CD41F7D040800A0C44A /* KGUtils.swift in Sources */,
+				0A993CD61F7D040800A0C44A /* SmoothThresholdFilter.swift in Sources */,
+				0A993CD91F7D040800A0C44A /* AdaptiveThresholdFilter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA545811F74DC94003F61A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA5458B1F74DC94003F61A2 /* ChineseIDCardOCRTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA5459E1F74E853003F61A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA545A71F74E853003F61A2 /* ViewController.swift in Sources */,
+				0AA545A51F74E853003F61A2 /* AppDelegate.swift in Sources */,
+				0A5C940F1F78EE7300836BF6 /* ScanViewController.swift in Sources */,
+				0A993C9A1F7CAEB600A0C44A /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AA545881F74DC94003F61A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AA5457B1F74DC94003F61A2 /* ChineseIDCardOCR */;
+			targetProxy = 0AA545871F74DC94003F61A2 /* PBXContainerItemProxy */;
+		};
+		0AA545B51F74E85F003F61A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AA5457B1F74DC94003F61A2 /* ChineseIDCardOCR */;
+			targetProxy = 0AA545B41F74E85F003F61A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0AA545A81F74E853003F61A2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AA545A91F74E853003F61A2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0AA545AD1F74E853003F61A2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AA545AE1F74E853003F61A2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A4CB8881F76174C00875276 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		0A4CB8891F76174C00875276 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		0A993CC11F7CCDCD00A0C44A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "ChineseIDCardOCR-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "Kevin.Gong.cnn.ChineseIDCardOCR-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		0A993CC21F7CCDCD00A0C44A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "ChineseIDCardOCR-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "Kevin.Gong.cnn.ChineseIDCardOCR-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		0AA5458E1F74DC94003F61A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0AA5458F1F74DC94003F61A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0AA545911F74DC94003F61A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PU764FA74Y;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ChineseIDCardOCR/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kevin.Gong.ChineseIDCardOCR;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0AA545921F74DC94003F61A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PU764FA74Y;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ChineseIDCardOCR/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kevin.Gong.ChineseIDCardOCR;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0AA545941F74DC94003F61A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChineseIDCardOCRTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kevin.Gong.ChineseIDCardOCRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0AA545951F74DC94003F61A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChineseIDCardOCRTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kevin.Gong.ChineseIDCardOCRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0AA545B21F74E853003F61A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PU764FA74Y;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kevin.Gong.cnn.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0AA545B31F74E853003F61A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PU764FA74Y;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kevin.Gong.cnn.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A4CB8871F76174C00875276 /* Build configuration list for PBXNativeTarget "TrainingDataGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A4CB8881F76174C00875276 /* Debug */,
+				0A4CB8891F76174C00875276 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A993CC01F7CCDCD00A0C44A /* Build configuration list for PBXNativeTarget "ChineseIDCardOCR-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A993CC11F7CCDCD00A0C44A /* Debug */,
+				0A993CC21F7CCDCD00A0C44A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AA545761F74DC94003F61A2 /* Build configuration list for PBXProject "ChineseIDCardOCR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA5458E1F74DC94003F61A2 /* Debug */,
+				0AA5458F1F74DC94003F61A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AA545901F74DC94003F61A2 /* Build configuration list for PBXNativeTarget "ChineseIDCardOCR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA545911F74DC94003F61A2 /* Debug */,
+				0AA545921F74DC94003F61A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AA545931F74DC94003F61A2 /* Build configuration list for PBXNativeTarget "ChineseIDCardOCRTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA545941F74DC94003F61A2 /* Debug */,
+				0AA545951F74DC94003F61A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AA545B11F74E853003F61A2 /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA545B21F74E853003F61A2 /* Debug */,
+				0AA545B31F74E853003F61A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0AA545731F74DC94003F61A2 /* Project object */;
+}
