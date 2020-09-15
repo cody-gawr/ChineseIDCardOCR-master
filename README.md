@@ -1,7 +1,4 @@
-# [Deprecated] 本项目已经迁移至新repo ==> [Evil 身份证、银行卡、等OCR识别](https://github.com/evilgix/Evil)
-
-# ChineseIDCardOCR
-🇨🇳中国二代身份证光学识别
+🇨🇳身份证光学识别
 
 ## 2017.09.21 Change Log 
 使用 `Vision` 和 `CoreML`替换原来的 `FFNN`
