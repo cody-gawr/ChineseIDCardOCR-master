@@ -17,7 +17,6 @@ TODO 如何生成训练数据，训练神经网络，转换 *.h5 -> *.mlmodel
 #### 如何体验  
 
  - Xcode9, iOS 11
- -  git clone `https://github.com/KevinGong2013/ChineseIDCardOCR`
  - Build && Run
 
 ````
@@ -27,10 +26,3 @@ TODO 如何生成训练数据，训练神经网络，转换 *.h5 -> *.mlmodel
 #### 图片处理过程
 
 ![screenshot](./images/chineseIDCard-2.png)
-
-# LICENSE
-	 Apache License
-	 Version 2.0, January 2004
-	 http://www.apache.org/licenses/	
-
-Copyright 2017 - 2018 Kevin.Gong aoxianglele#icloud.com
